@@ -15,6 +15,10 @@ import { ChartsModule } from 'ng2-charts';
 import { ServerComponent } from './server/server.component';
 import { PaginationComponent } from './pagination/pagination.component';
 
+//Services
+import {SalesDataService} from "./services/sales-data.service";
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -33,9 +37,12 @@ import { PaginationComponent } from './pagination/pagination.component';
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes), 
-    ChartsModule
+    ChartsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    SalesDataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
