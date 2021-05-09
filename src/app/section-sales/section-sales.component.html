@@ -33,7 +33,7 @@
                 <h5>Monthly Sales by Product</h5>            
             </div>
             <div class='card-body'>
-                <app-line-chart></app-line-chart>
+                <app-line-chart *ngIf="salesDataByCustomer" [inputData]="salesDataByCustomer" [limit]="3"></app-line-chart>
             </div>
         </div>
     </div>

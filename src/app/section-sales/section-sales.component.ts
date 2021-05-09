@@ -19,7 +19,7 @@ export class SectionSalesComponent implements OnInit {
     this._salesDataService.getOrdersByState().subscribe (res => {
       this.salesDataByState = res;
     });
-    this._salesDataService.getOrdersByCustomer(5).subscribe (res => {
+    this._salesDataService.getOrdersByCustomer(3).subscribe (res => {
       this.salesDataByCustomer = res;
     });
   }
